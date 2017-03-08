@@ -1,0 +1,16 @@
+{
+    "name": "larowlan/roman-numerals",
+    "description": "Provides roman numeral generator",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "license": "GPL2+",
+    "authors": [
+        {
+            "name": "larowlan",
+            "email": "l@pnx.me"
+        }
+    ],
+    "require": {}
+}
