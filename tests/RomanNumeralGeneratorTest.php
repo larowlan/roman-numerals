@@ -3,13 +3,14 @@
 namespace Larowlan\RomanNumeral\Tests;
 
 use Larowlan\RomanNumeral\RomanNumeralGenerator;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Defines a class for testing roman numeral generation.
  *
  * @group Unit
  */
-class RomanNumeralGeneratorTest extends \PHPUnit_Framework_TestCase {
+class RomanNumeralGeneratorTest extends TestCase {
 
   /**
    * Generator under test.
