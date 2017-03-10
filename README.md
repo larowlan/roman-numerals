@@ -14,7 +14,7 @@ A colleague has made a start by writing test cases for the upper-case generation
 
 1. Clone the repo into your private github account.
 2. Create a new branch for finishing the work.
-3. Your colleague didn't get time to configure the autoloader, configure the autoloader for both the src and tests folder. Tests should only be in the dev autoloader.
+3. Your colleague didn't get time to configure the autoloader, modify composer.json to configure the autoloader for both the src and tests folder. Tests should only be in the dev autoloader.
 4. Make the existing tests pass by adding the implementation to `Larowlan\RomanNumerals\RomanNumeralGenerator::generate()`.
 5. Write test cases for lowercase generation, reuse where possible.
 6. Write the lower case implementation.
