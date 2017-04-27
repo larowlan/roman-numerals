@@ -6,7 +6,8 @@ namespace Larowlan\RomanNumeral;
  * Defines a class for generating roman numerals from integers.
  */
 class RomanNumeralGenerator {
-  private $numeral_key = array(
+  // The mapping between roman numerals and numbers.
+  private $roman_mappings = array(
     "M" => 1000,
     "CM" => 900,
     "D" => 500,
@@ -37,12 +38,12 @@ class RomanNumeralGenerator {
   public function generate(int $number, bool $lowerCase = FALSE) : string {
     $result = "";
 
-    foreach ($this->numeral_key as $roman_number => $arabic_number) {
+    foreach ($this->roman_mappings as $roman_number => $arabic_number) {
       $result .= str_repeat($roman_number, intval($number / $arabic_number));
       $number = $number % $arabic_number;
     }
 
-    return $result;
+    return $lowerCase ? strtolower($result) : $result;
   }
 
 }
