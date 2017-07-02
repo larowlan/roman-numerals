@@ -5,6 +5,7 @@ namespace Larowlan\RomanNumeral\Tests;
 use Larowlan\RomanNumeral\RomanNumeralGenerator;
 
 /**
+ *
  * Defines a class for testing roman numeral generation.
  *
  * @group Unit
@@ -63,4 +64,28 @@ class RomanNumeralGeneratorTest extends \PHPUnit_Framework_TestCase {
       3000 => [3000, "MMM"],
     ];
   }
+
+  /**
+   * Tests roman numeral generation.
+   *
+   * @dataProvider providerTestLowerCaseGeneration
+   */
+  public function testLowerCaseGeneration($number, $expected) {
+    $this->assertEquals($expected, $this->generator->generate($number, TRUE));
+  }
+
+  /**
+   * Data provider for testLowerCaseGeneration().
+   *
+   * @return array
+   *   Test cases.
+   */
+  public function providerTestLowerCaseGeneration() {
+    $output = [];
+    foreach ($this->providerTestGeneration() as $key => $test) {
+      $output[$key] = [$test[0], strtolower($test[1])];
+    }
+    return $output;
+  }
+
 }
