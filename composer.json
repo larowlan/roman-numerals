@@ -12,5 +12,8 @@
             "email": "l@pnx.me"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+      "psr-4": {"Larowlan\\RomanNumeral\\": "src/"}
+    }
 }
