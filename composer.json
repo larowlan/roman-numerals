@@ -12,5 +12,14 @@
             "email": "l@pnx.me"
         }
     ],
-    "require": {}
+    "autoload": {
+    "psr-4": {
+      "Larowlan\\RomanNumeral\\" : "src/"
+    }
+   },
+   "autoload-dev" : {
+    "psr-4": {
+      "Larowlan\\RomanNumeral\\Test\\": "test/"
+    }
+  }
 }
