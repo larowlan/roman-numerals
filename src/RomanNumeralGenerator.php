@@ -35,9 +35,9 @@ class RomanNumeralGenerator {
       "I"=>1 
     );	
     $result = "";
-    foreach ($numerals as $key=>$value) {
-      $result .= str_repeat($key, $number / $value);
-      $number %= $value;
+    foreach ($numerals as $roman => $decimal) {
+      $result .= str_repeat($roman, $number / $decimal);
+      $number %= $decimal;
     }
     return $lowerCase ? strtolower($result) : $result;
   }

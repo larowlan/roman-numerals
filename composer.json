@@ -3,10 +3,14 @@
     "description": "Provides roman numeral generator",
     "type": "library",
     "autoload": {
-        "classmap": [ "src/" ]
+        "psr-4": {
+            "Larowlan\\RomanNumeral\\" : "src/"
+        }
     },
     "autoload-dev": {
-        "classmap": [ "tests/" ]
+        "psr-4": {
+            "Larowlan\\RomanNumeral\\Tests\\" : "tests/"
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "~5.0"
