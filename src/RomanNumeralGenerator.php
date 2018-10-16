@@ -40,15 +40,15 @@ class RomanNumeralGenerator {
    */
   public function generate(int $number, bool $lowerCase = FALSE) : string {
 
-     $roman_numeral = '';
+    $roman_numeral = '';
 
-     foreach ($this->roman_numerals as $roman => $numeral) {
-        $match = ($number / $numeral);
-        $roman_numeral .= str_repeat($roman, $match);
-        $number = ($number % $numeral);
-     }
+    foreach ($this->roman_numerals as $roman => $numeral) {
+      $match = ($number / $numeral);
+      $roman_numeral .= str_repeat($roman, $match);
+      $number = ($number % $numeral);
+    }
 
-     return ($lowerCase) ? strtolower($roman_numeral) : $roman_numeral;
+    return ($lowerCase) ? strtolower($roman_numeral) : $roman_numeral;
 
   }
 
