@@ -18,7 +18,7 @@ class RomanNumeralGenerator {
    * @return string
    *   Roman numeral representing the passed integer.
    */
-    public function generate(int $number, bool $lowerCase = FALSE) : string {
+    public function generate(int $number, bool $lowerCase = TRUE) : string {
 
         $result = '';
 
