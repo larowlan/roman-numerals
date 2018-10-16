@@ -10,7 +10,21 @@
         {
             "name": "larowlan",
             "email": "l@pnx.me"
+        },
+        {
+            "name": "xtineroque",
+            "email": "xtineroque@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Larowlan\\RomanNumeral\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "prs-4": {
+            "Larowlan\\RomanNumeral\\Tests\\": "tests/"
+        }
+    }
 }
