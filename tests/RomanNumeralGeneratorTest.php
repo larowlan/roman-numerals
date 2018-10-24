@@ -36,6 +36,15 @@ class RomanNumeralGeneratorTest extends \PHPUnit_Framework_TestCase {
   }
 
   /**
+   * Tests roman numeral generation for lower case.
+   *
+   * @dataProvider providerTestGenerationLowerCase
+   */
+  public function testGenerationLowerCase($number, $expected) {
+    $this->assertEquals($expected, $this->generator->generate($number, true));
+  }
+
+  /**
    * Data provider for testGeneration().
    *
    * @return array
@@ -62,5 +71,21 @@ class RomanNumeralGeneratorTest extends \PHPUnit_Framework_TestCase {
       1024 => [1024, "MXXIV"],
       3000 => [3000, "MMM"],
     ];
+  }
+
+  /**
+   * Data provider for testGenerationLowerCase().
+   *
+   * @return array
+   *   Test cases.
+   */
+  public function providerTestGenerationLowerCase() {
+    $r = [];
+    $data = $this->providerTestGeneration();
+    foreach ($data as $k => $d) {
+      $r[$k] = [$d[0], strtolower($d[1])];
+    }
+
+    return $r;    
   }
 }
